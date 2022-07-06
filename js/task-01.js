@@ -1,25 +1,36 @@
-const categorItemsEl = document.querySelectorAll(".item").length;
-const titleAnimallEl = document.querySelector(
-  ".item:nth-child(1) h2"
-).innerHTML;
-const titleProductEl = document.querySelector(
-  ".item:nth-child(2) h2"
-).innerHTML;
-const titleTechnologiEl = document.querySelector(
-  ".item:nth-child(3) h2"
-).innerHTML;
-const animalslAllEl = document.querySelectorAll(".item:nth-child(1) li").length;
-const productAllEl = document.querySelectorAll(".item:nth-child(2) li").length;
-const technologiAllEl = document.querySelectorAll(
-  ".item:nth-child(3) li"
-).length;
+const allCategoriesEl = document.querySelectorAll(".item");
+console.log("Number of categories:", allCategoriesEl.length);
 
-console.log(`Number of categories: ${categorItemsEl}`);
-console.log(`Category: ${titleAnimallEl}`);
-console.log(`Elements: ${animalslAllEl}`);
+allCategoriesEl.forEach((el) => {
+  const categoriesTitle = el.querySelector("h2");
+  console.log("Category:", categoriesTitle.textContent);
 
-console.log(`Category: ${titleProductEl}`);
-console.log(`Elements: ${productAllEl}`);
+  const lengthOfList = el.querySelectorAll("ul > li");
+  console.log("Elements:", lengthOfList.length);
+});
 
-console.log(`Category: ${titleTechnologiEl}`);
-console.log(`Elements: ${technologiAllEl}`);
+// const categorItemsEl = document.querySelectorAll(".item").length;
+// const titleAnimallEl = document.querySelector(
+//   ".item:nth-child(1) h2"
+// ).innerHTML;
+// const titleProductEl = document.querySelector(
+//   ".item:nth-child(2) h2"
+// ).innerHTML;
+// const titleTechnologiEl = document.querySelector(
+//   ".item:nth-child(3) h2"
+// ).innerHTML;
+// const animalslAllEl = document.querySelectorAll(".item:nth-child(1) li").length;
+// const productAllEl = document.querySelectorAll(".item:nth-child(2) li").length;
+// const technologiAllEl = document.querySelectorAll(
+//   ".item:nth-child(3) li"
+// ).length;
+
+// console.log(`Number of categories: ${categorItemsEl}`);
+// console.log(`Category: ${titleAnimallEl}`);
+// console.log(`Elements: ${animalslAllEl}`);
+
+// console.log(`Category: ${titleProductEl}`);
+// console.log(`Elements: ${productAllEl}`);
+
+// console.log(`Category: ${titleTechnologiEl}`);
+// console.log(`Elements: ${technologiAllEl}`);

@@ -5,7 +5,7 @@ const loginFormEl = document.querySelector(".login-form");
 
 loginFormEl.addEventListener("submit", (event) => {
   event.preventDefault();
-  if (emailEl.value === "" && passwordEl.value === "") {
+  if (emailEl.value === "" || passwordEl.value === "") {
     return alert("Поля должны быть заполнены!");
   }
 

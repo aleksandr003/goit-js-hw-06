@@ -5,7 +5,7 @@ const btnIncrementEl = document.querySelector(
   'button[data-action="increment"]'
 );
 const valueEl = document.querySelector("#value");
-const counterValue = 0;
+let counterValue = 0;
 
 const addOneNumber = function () {
   counterValue += 1;
